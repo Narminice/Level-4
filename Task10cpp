@@ -1,0 +1,25 @@
+10. Sadə kalkulyator (istənilən sayda əməliyyat).
+#include <iostream>
+using namespace std;
+
+int main() {
+    double a, b;
+    char op;
+    cout << "Əməliyyatı daxil edin (+, -, *, /): ";
+    cin >> op;
+    cout << "İki ədəd daxil edin: ";
+    cin >> a >> b;
+
+    switch (op) {
+        case '+': cout << "Nəticə: " << a + b; break;
+        case '-': cout << "Nəticə: " << a - b; break;
+        case '*': cout << "Nəticə: " << a * b; break;
+        case '/':
+            if (b != 0) cout << "Nəticə: " << a / b;
+            else cout << "Sıfıra bölmək olmaz!";
+            break;
+        default: cout << "Yanlış əməliyyat!";
+    }
+
+    return 0;
+}
