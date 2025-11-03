@@ -1,0 +1,19 @@
+8. Ədədin binary (ikilik) formasını tapın.
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Ədəd daxil edin: ";
+    cin >> n;
+
+    string binary = "";
+    if (n == 0) binary = "0";
+    while (n > 0) {
+        binary = char('0' + n % 2) + binary;
+        n /= 2;
+    }
+
+    cout << "İkilik formada: " << binary;
+    return 0;
+}
