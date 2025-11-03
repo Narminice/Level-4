@@ -1,0 +1,17 @@
+9. 1-dən 1000-ə qədər bütün palindrom ədədləri tapın.
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "Palindrom ədədlər: ";
+    for (int i = 1; i <= 1000; i++) {
+        int n = i, ters = 0;
+        while (n != 0) {
+            ters = ters * 10 + n % 10;
+            n /= 10;
+        }
+        if (i == ters)
+            cout << i << " ";
+    }
+    return 0;
+}
