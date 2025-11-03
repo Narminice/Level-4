@@ -1,0 +1,15 @@
+1. 1-dən N-ə qədər bütün cüt ədədlərin kvadratlarının cəmini tapın.
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, cem = 0;
+    cout << "Ədəd daxil edin: ";
+    cin >> n;
+
+    for (int i = 2; i <= n; i += 2)
+        cem += i * i;
+
+    cout << "Cüt ədədlərin kvadratlarının cəmi: " << cem;
+    return 0;
+}
