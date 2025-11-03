@@ -1,0 +1,16 @@
+5. Ədəd daxil edin — həmin ədədin tam bölənlərini tapın.
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Ədəd daxil edin: ";
+    cin >> n;
+
+    cout << "Tam bölənlər: ";
+    for (int i = 1; i <= n; i++)
+        if (n % i == 0)
+            cout << i << " ";
+
+    return 0;
+}
