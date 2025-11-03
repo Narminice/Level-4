@@ -1,0 +1,18 @@
+15. İstifadəçi 0 daxil edənə qədər ədədləri toplayın və ən böyüyünü tapın.
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, cem = 0, max = 0;
+    cout << "Ədədləri daxil edin (bitirmək üçün 0 yazın): ";
+
+    while (true) {
+        cin >> n;
+        if (n == 0) break;
+        cem += n;
+        if (n > max) max = n;
+    }
+
+    cout << "Cəm: " << cem << "\nƏn böyük: " << max;
+    return 0;
+}
