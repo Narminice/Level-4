@@ -1,0 +1,19 @@
+13. Tək və cüt indekslərdəki ədədlərin cəmini ayrıca hesablayın.
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, eded, tekCem = 0, cutCem = 0;
+    cout << "Neçə ədəd daxil edəcəksiniz: ";
+    cin >> n;
+
+    for (int i = 1; i <= n; i++) {
+        cout << i << ". ədədi daxil edin: ";
+        cin >> eded;
+        if (i % 2 == 0) cutCem += eded;
+        else tekCem += eded;
+    }
+
+    cout << "Tək indeks cəmi: " << tekCem << "\nCüt indeks cəmi: " << cutCem;
+    return 0;
+}
