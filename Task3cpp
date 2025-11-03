@@ -1,0 +1,19 @@
+3. N daxil edin və 1-dən N-ə qədər bütün sadə ədədləri ekrana çıxarın.
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Ədəd daxil edin: ";
+    cin >> n;
+
+    cout << "Sadə ədədlər: ";
+    for (int i = 2; i <= n; i++) {
+        bool sade = true;
+        for (int j = 2; j * j <= i; j++)
+            if (i % j == 0) sade = false;
+        if (sade) cout << i << " ";
+    }
+
+    return 0;
+}
