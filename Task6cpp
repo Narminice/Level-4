@@ -1,0 +1,26 @@
+6. N ədəd daxil edin və ən böyüyünü, ən kiçiyini və ortalamasını tapın.
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, eded, max, min;
+    double cem = 0;
+    cout << "Neçə ədəd daxil edəcəksiniz: ";
+    cin >> n;
+
+    cout << "1. ədədi daxil edin: ";
+    cin >> eded;
+    max = min = eded;
+    cem += eded;
+
+    for (int i = 2; i <= n; i++) {
+        cout << i << ". ədədi daxil edin: ";
+        cin >> eded;
+        cem += eded;
+        if (eded > max) max = eded;
+        if (eded < min) min = eded;
+    }
+
+    cout << "Ən böyük: " << max << "\nƏn kiçik: " << min << "\nOrta: " << cem / n;
+    return 0;
+}
